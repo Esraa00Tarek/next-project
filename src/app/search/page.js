@@ -92,10 +92,11 @@ export default function SearchPage() {
       {/* Search Results Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          {initialQuery && (
-            <h1 className="text-3xl font-bold mb-8 text-gray-800">
-              Search Results for: "{initialQuery}"
-            </h1>
+         {initialQuery && (
+  <h1 className="text-3xl font-bold mb-8 text-gray-800">
+    Search Results for: &quot;{initialQuery}&quot;
+  </h1>
+
           )}
 
           {loading ? (
@@ -108,12 +109,12 @@ export default function SearchPage() {
               <p>{error}</p>
             </div>
           ) : movies.length === 0 && initialQuery ? (
-            <div className="text-center py-12 text-gray-800">
-              <p className="text-lg">
-                No movies found for "{initialQuery}"
-              </p>
-            </div>
-          ) : movies.length === 0 && !initialQuery ? (
+  <div className="text-center py-12 text-gray-800">
+    <p className="text-lg">
+      No movies found for &quot;{initialQuery}&quot;
+    </p>
+  </div>
+) : movies.length === 0 && !initialQuery ? (
             <div className="text-center py-12 text-gray-800">
               <Search className="mx-auto h-12 w-12 text-gray-400" />
               <h2 className="mt-4 text-2xl font-bold text-gray-800">
